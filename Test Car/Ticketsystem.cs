@@ -15,7 +15,7 @@ namespace TicketClassLibrary.Tests
         public void Price_ReturnsFixedPrice()
         {
             // Arrange
-            var car = new Car();
+            var car = new Car("XX12345", DateTime.Now);
 
             // Act
             var result = car.Price();
@@ -29,7 +29,7 @@ namespace TicketClassLibrary.Tests
         public void VehicleType_ReturnsCar()
         {
             // Arrange
-            var car = new Car();
+            var car = new Car("XX12345", DateTime.Now);
 
             // Act
             var result = car.VehicleType();
@@ -48,7 +48,7 @@ namespace TicketClassLibrary.Tests
         public void Price_ReturnsFixedPrice()
         {
             // Arrange
-            var mc = new MC();
+            var mc = new MC("XX12345", DateTime.Now);
 
             // Act
             var result = mc.Price();
@@ -59,13 +59,13 @@ namespace TicketClassLibrary.Tests
 
 
         [TestMethod]
-        public void Vehicle_ReturnsMC()
+        public void VehicleType_ReturnsMC()
         {
             // Arrange
-            var mc = new MC();
+            var mc = new MC("XX12345", DateTime.Now);
 
             // Act
-            var result = mc.Vehicle();
+            var result = mc.VehicleType();
 
             //Assert
             Assert.AreEqual("MC", result);
