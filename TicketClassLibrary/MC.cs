@@ -1,13 +1,18 @@
-﻿namespace TicketClassLibrary
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TicketClassLibrary
 {
     /// <summary>
-    /// Beskriver en bil med en licenseplate og date.
+    /// Beskriver en MC med en licenseplate og date.
     /// </summary>
-    public class Car
+    public class MC
     {
-        // Instansfelter
         /// <summary>
-        /// Bilens nummerplade.
+        /// MC's nummerplade
         /// </summary>
         private string _licenseplate;
 
@@ -17,9 +22,8 @@
         private DateTime _date;
 
 
-        // Properties
         /// <summary>
-        /// Henter eller sætter bilens nummerplade.
+        /// Henter eller sætter MC's nummerplade.
         /// </summary>
         public string Licenseplate { get; set; }
 
@@ -29,23 +33,22 @@
         public DateTime Date { get; set; }
 
 
-        //Metoder
         /// <summary>
-        /// Returnerer bilens faste pris.
+        /// Returnerer MC's faste pris.
         /// </summary>
-        /// <returns>Den faste pris på 240.</returns>
+        /// <returns>Den faste pris på 125</returns>
         public double Price()
         {
-            return 240;
+            return 125;
         }
 
         /// <summary>
-        /// Returnerer typen af bil.
+        /// Returnerer typen som "MC" 
         /// </summary>
-        /// <returns>Strengen "Car"</returns>
-        public string VehicleType()
+        /// <returns>strengen "MC"</returns>
+        public string Vehicle()
         {
-            return "Car";
+            return "MC";
         }
     }
 }

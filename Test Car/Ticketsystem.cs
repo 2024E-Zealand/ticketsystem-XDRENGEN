@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TicketClassLibrary.Tests
 {
-    [TestClass()]
+    [TestClass]
     public class CarTest
     {
         [TestMethod]
@@ -36,6 +36,39 @@ namespace TicketClassLibrary.Tests
 
             // Assert
             Assert.AreEqual("Car", result);
+        }
+    }
+
+
+
+    [TestClass]
+    public class McTest
+    {
+        [TestMethod]
+        public void Price_ReturnsFixedPrice()
+        {
+            // Arrange
+            var mc = new MC();
+
+            // Act
+            var result = mc.Price();
+
+            // Assert
+            Assert.AreEqual(125, result);
+        }
+
+
+        [TestMethod]
+        public void Vehicle_ReturnsMC()
+        {
+            // Arrange
+            var mc = new MC();
+
+            // Act
+            var result = mc.Vehicle();
+
+            //Assert
+            Assert.AreEqual("MC", result);
         }
     }
 }
