@@ -2,6 +2,7 @@
 {
     /// <summary>
     /// Beskriver en bil med en licenseplate og date.
+    /// Arver fra Vehicle klassen.
     /// </summary>
     public class Car : Vehicle
     {
@@ -35,7 +36,7 @@
         /// </summary>
         /// <param name="licenseplate">Bilens nummerplpade.</param>
         /// <param name="date">Datoen forbundet med bilen.</param>
-        public Car(string licenseplate, DateTime date) : base(licenseplate, date)
+        public Car(string licenseplate, DateTime date, bool broBizzUsed) : base(licenseplate, date, broBizzUsed)
         {
         }
     }

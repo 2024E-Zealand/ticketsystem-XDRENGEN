@@ -8,6 +8,7 @@ namespace TicketClassLibrary
 {
     /// <summary>
     /// Beskriver en MC med en licenseplate og date.
+    /// Arver fra Vehicle klassen.
     /// </summary>
     public class MC : Vehicle
     {
@@ -41,7 +42,7 @@ namespace TicketClassLibrary
         /// </summary>
         /// <param name="licenseplate">MC's nummerplade.</param>
         /// <param name="date">Datoen forbundet med MC.</param>
-        public MC(string licenseplate, DateTime date) : base(licenseplate, date)
+        public MC(string licenseplate, DateTime date, bool broBizzUsed) : base(licenseplate, date, broBizzUsed)
         {
         }
     }
