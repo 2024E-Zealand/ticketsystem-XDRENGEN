@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TicketClassLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:TicketClassLibrary.Car">
+            <summary>
+            Beskriver en bil med en licenseplate og date.
+            Arver fra Vehicle klassen.
+            </summary>
+        </member>
+        <member name="M:TicketClassLibrary.Car.Price">
+            <summary>
+            Returnerer bilens faste pris.
+            </summary>
+            <returns>Den faste pris på 240.</returns>
+        </member>
+        <member name="M:TicketClassLibrary.Car.VehicleType">
+            <summary>
+            Returnerer typen af bil.
+            </summary>
+            <returns>Strengen "Car"</returns>
+        </member>
+        <member name="M:TicketClassLibrary.Car.#ctor(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            Initialiserer en ny instans af Car-klassen.
+            </summary>
+            <param name="licenseplate">Bilens nummerplpade.</param>
+            <param name="date">Datoen forbundet med bilen.</param>
+        </member>
+        <member name="T:TicketClassLibrary.MC">
+            <summary>
+            Beskriver en MC med en licenseplate og date.
+            Arver fra Vehicle klassen.
+            </summary>
+        </member>
+        <member name="M:TicketClassLibrary.MC.Price">
+            <summary>
+            Returnerer MC's faste pris.
+            </summary>
+            <returns>Den faste pris på 125</returns>
+        </member>
+        <member name="M:TicketClassLibrary.MC.VehicleType">
+            <summary>
+            Returnerer typen som "MC" 
+            </summary>
+            <returns>strengen "MC"</returns>
+        </member>
+        <member name="M:TicketClassLibrary.MC.#ctor(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            Initialiserer en ny instans af MC-klassen.
+            </summary>
+            <param name="licenseplate">MC's nummerplade.</param>
+            <param name="date">Datoen forbundet med MC.</param>
+        </member>
+        <member name="T:TicketClassLibrary.Vehicle">
+            <summary>
+            En basisklasse som specialized klasser kan arve fra.
+            </summary>
+        </member>
+        <member name="F:TicketClassLibrary.Vehicle._licenseplate">
+            <summary>
+            Køretøjets nummerplade.
+            </summary>
+        </member>
+        <member name="F:TicketClassLibrary.Vehicle._date">
+            <summary>
+            Køretøjets dato.
+            </summary>
+        </member>
+        <member name="P:TicketClassLibrary.Vehicle.Licenseplate">
+            <summary>
+            Henter eller sætter køretøjets nummerplade.
+            Nummerpladen må være på max 7 tegn.
+            </summary>
+        </member>
+        <member name="P:TicketClassLibrary.Vehicle.Date">
+            <summary>
+            Henter eller sætter datoen for køretøjet.
+            </summary>
+        </member>
+        <member name="P:TicketClassLibrary.Vehicle.BroBizzUsed">
+            <summary>
+            Her angives det om BroBizzen bliver brugt.
+            Den er sat til false som standart (bliver ikke brugt)
+            </summary>
+        </member>
+        <member name="M:TicketClassLibrary.Vehicle.Price">
+            <summary>
+            Returnerer prisen for et køretøj.
+            </summary>
+            <returns>Prisen som en double.</returns>
+        </member>
+        <member name="M:TicketClassLibrary.Vehicle.VehicleType">
+            <summary>
+            Returnerer køretøjstypen.
+            </summary>
+            <returns>Køretøjstypen som en string.</returns>
+        </member>
+        <member name="M:TicketClassLibrary.Vehicle.PriceWithDiscount">
+            <summary>
+            Her bregnes rabatten med BroBizz som er 5%.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TicketClassLibrary.Vehicle.#ctor(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            Initialiserer en ny instans af Vehicle klassen men en nummerplade og dato.
+            </summary>
+            <param name="licenseplate">Nummerpladen på køretøjet.</param>
+            <param name="date">Datoen forbundet med køretøjet.</param>
+            <param name="broBizzUsed">Angives om BroBizzen bliver brugt.</param>
+        </member>
+    </members>
+</doc>

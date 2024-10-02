@@ -9,7 +9,7 @@ namespace TicketClassLibrary
     /// <summary>
     /// En basisklasse som specialized klasser kan arve fra.
     /// </summary>
-    public abstract class Vehicle
+    public abstract class Vehicle : IVehicle
     {
         // Instansfelter
 
@@ -77,12 +77,12 @@ namespace TicketClassLibrary
         /// Her bregnes rabatten med BroBizz som er 5%.
         /// </summary>
         /// <returns></returns>
-        public double PriceWithDiscount()
+        public virtual double PriceWithDiscount()
         {
             double originalPrice = Price();
             if (BroBizzUsed)
             {
-                return originalPrice * 0.95;
+                originalPrice *= 0.95;
             }
             return originalPrice;
         }
@@ -93,7 +93,7 @@ namespace TicketClassLibrary
         // Konstruktør
 
         /// <summary>
-        /// Initialiserer en ny instans af Vehicle klassen men en nummerplade og dato.
+        /// Initialiserer en ny instans af Vehicle klassen med en nummerplade og dato.
         /// </summary>
         /// <param name="licenseplate">Nummerpladen på køretøjet.</param>
         /// <param name="date">Datoen forbundet med køretøjet.</param>
